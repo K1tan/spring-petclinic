@@ -41,7 +41,7 @@ pipeline {
 					}catch(Exception e){}
 				}
 				unzip zipFile: "${BUILD_NUMBER}.zip", dir: 'C:\\Deploy'
-			}
+			
 		}
 	   }
 	}
