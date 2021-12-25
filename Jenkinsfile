@@ -34,7 +34,6 @@ pipeline {
 	    }
 	    stage('Deploy'){
 		steps{
-			dir('C:\\'){
 				script{
 					try
 					{
