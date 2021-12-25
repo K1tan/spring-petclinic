@@ -28,10 +28,8 @@ pipeline {
             }
 	    stage('Archive'){
                 steps{
-			dir('C:\\'){
-				zip zipFile: "${BUILD_NUMBER}.zip", archive:false
-				archiveArtifacts artifacts: "${BUILD_NUMBER}.zip"
-			}
+			zip zipFile: "${BUILD_NUMBER}.zip", archive:false, dir: 'target'
+			archiveArtifacts artifacts: "${BUILD_NUMBER}.zip"
 		}
 	    }
 	    stage('Deploy'){
